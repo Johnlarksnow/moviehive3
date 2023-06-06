@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <!-- Primary Meta Tags -->
+  <title>MovieHive | Ad Free Movies</title>
+  <meta name="title" content="MovieHive | Ad Free Movies">
+  <meta name="description" content="Enjoy endless free movies at the tip of your finger with MovieHive.">
+  <link rel="icon" href="moviehive.png" type="image/png">
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.moviehive.lol/">
+  <meta property="og:title" content="MovieHive | Ad Free Movies">
+  <meta property="og:description" content="Enjoy endless free movies at the tip of your finger with MovieHive.">
+  <meta property="og:image" content="https://i.imgur.com/WWKVaTT.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.moviehive.lol/">
+  <meta property="twitter:title" content="MovieHive | Ad Free Movies">
+  <meta property="twitter:description" content="Enjoy endless free movies at the tip of your finger with MovieHive.">
+  <meta property="twitter:image" content="https://i.imgur.com/WWKVaTT.png">
+
+
+  <link rel="stylesheet" href="other.css">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="/css/group_15/theme_5/style.min.css?v=8.4">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+
+  <script>var recaptcha_site_key = '6LfS7KAaAAAAAMOFYYEvAY-7F9fNrZIqIJdlCeYX';</script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfS7KAaAAAAAMOFYYEvAY-7F9fNrZIqIJdlCeYX"></script>
+
+
+
+  <style>
+    .btn-filter-it input {
+      /*display: inline-block;*/
+      position: absolute;
+    }
+
+    .btn-filter-it input[type="checkbox"],
+    .btn-filter-it input[type="radio"] {
+      opacity: 0;
+      display: none;
+      z-index: 100;
+    }
+
+    .btn-filter-it input[type="checkbox"]:checked+label,
+    .btn-filter-it input[type="radio"]:checked+label,
+    .Checked+label {
+      border-color: #42B584;
+      color: #42B584 !important;
+      background: #eafff6;
+    }
+
+    .btn-filter-it label {
+      display: inline-block;
+      font-weight: 400;
+      color: #212529;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+      min-width: 50px;
+      font-size: 12px;
+      line-height: 1em;
+      padding: 8px 11px;
+      float: left;
+      margin: 3px 6px 3px 0;
+      background: #f6f6f6;
+      border: 1px solid #eee;
+      border-radius: 30px;
+    }
+
+    .btn-filter-it label:hover {
+      background: #DDD;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+
+    <div id="sidebar_menu_bg"></div>
+    <div id="sidebar_menu">
+      <button class="btn btn-circle btn-secondary toggle-sidebar"><i class="fas fa-arrow-left"></i></button>
+      <ul class="nav sidebar_menu-list">
+        <li class="nav-item active">
+          <a class="nav-link nav-link-main" href="/" title="Home">
+            <div class="nl-icon mr-2"><i class="fas fa-columns"></i></div>
+            Home
+          </a>
+          <div class="clearfix"></div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-main" href="/movie" title="Movies">
+            <div class="nl-icon mr-2"><i class="fas fa-play-circle"></i></div>
+            Movies
+          </a>
+          <div class="clearfix"></div>
+        </li>
+       
+        <li class="nav-item by-country">
+          <a class="nav-link nav-link-sub" href="javascript:void(0)" title="Country">Country</a>
+          <div class="sidebar_menu-sub" id="sidebar_subs_country">
+            <ul class="nav sub-menu">
+
+              <li class="nav-item"><a class="nav-link" href="/country/AR" title="Argentina">Argentina</a>
+              </li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/AU" title="Australia">Australia</a>
+              </li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/AT" title="Austria">Austria</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/BE" title="Belgium">Belgium</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/BR" title="Brazil">Brazil</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/CA" title="Canada">Canada</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/CN" title="China">China</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/CZ" title="Czech Republic">Czech
+                  Republic</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/DK" title="Denmark">Denmark</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/FI" title="Finland">Finland</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/FR" title="France">France</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/DE" title="Germany">Germany</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/HK" title="Hong Kong">Hong Kong</a>
+              </li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/HU" title="Hungary">Hungary</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/IN" title="India">India</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/IE" title="Ireland">Ireland</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/IL" title="Israel">Israel</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/IT" title="Italy">Italy</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/JP" title="Japan">Japan</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/LU" title="Luxembourg">Luxembourg</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/MX" title="Mexico">Mexico</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/NL" title="Netherlands">Netherlands</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/NZ" title="New Zealand">New
+                  Zealand</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/NO" title="Norway">Norway</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/PL" title="Poland">Poland</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/RO" title="Romania">Romania</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/RU" title="Russia">Russia</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/ZA" title="South Africa">South
+                  Africa</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/KR" title="South Korea">South
+                  Korea</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/ES" title="Spain">Spain</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/SE" title="Sweden">Sweden</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/CH" title="Switzerland">Switzerland</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/TW" title="Taiwan">Taiwan</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/TH" title="Thailand">Thailand</a>
+              </li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/GB" title="United Kingdom">United
+                  Kingdom</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="/country/US" title="United States of America">United States
+                  of America</a></li>
+
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </li>
+
+        <li class="nav-item"><a class="nav-link nav-link-main" href="/tv-show" title="TV Shows">
+            <div class="nl-icon mr-2">TV Shows</div>
+          </a></li>
+          
+        <li class="nav-item"><a class="nav-link nav-link-main" href="/top-imdb" title="Top IMDB">
+            <div class="nl-icon mr-2">Top IMDB</div>
+          </a></li>
+        <li class="nav-item"><a class="nav-link nav-link-main" href="/android-movies-apk" title="Android App">
+            <div class="nl-icon mr-2">Android App</div>
+          </a></li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+
+    <div id="wrapper">
+      <div id="header" style="background-color: black;" class="page-home">
+        <div class="container">
+          <div id="mobile_menu"><i class="fa fa-bars"></i></div>
+          <a href="/" id="logo" title="FreeMoviesFull">
+            <img src="moviehive.png" alt="Logo">
+
+          
+
+            <div class="clearfix"></div>
+          </a>
+          <!--Begin: Menu-->
+          <div id="header_menu">
+            <ul class="nav header_menu-list">
+              <li class="nav-item"><a href="/" title="Home">Home</a></li>
+              <li class="nav-item"><a href="results.html" title="Movies">Movies</a>
+              </li>
+              <li class="nav-item"><a href="tvshow.html" title="TV Shows">TV Shows</a></li>
+              <li class="nav-item"><a href="anime.html" title="TV Shows">Anime</a></li>
+
+              <div class="clearfix"></div>
+          </div>
+          <!--End: Menu-->
+
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <div id="search-home">
+        <div class="content">
+          <div class="moviebanner"> </div>
+          <div class="popuplar">
+            <center>
+              <div class="search-container">
+               
+                <input  type="search" id="search-input" v-model="keyword" name="keyword" type="text" class="form-control fingerprint"
+                placeholder="Enter Anime...">
+                
+                </div></center>
+                <center>
+                  <div id="video" class="video">
+                    <iframe style="height:36vw; width: 72vw; margin-top: 2rem;" id="iframe" src="" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                   
+              
+                    <div id="webSeriesData"></div>
+                  </div>
+                </center>
+          </div>
+          <div class="responsediv" style=" display: flex; justify-content: center;" id="results" id="results"></div>
+      
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+      <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.1/lazysizes.min.js"
+        async></script>
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+      <script src="script.min.js"></script>
+
+</body>
+
+</html>
